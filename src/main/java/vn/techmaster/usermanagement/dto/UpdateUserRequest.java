@@ -8,5 +8,6 @@ public record UpdateUserRequest(@NotEmpty(message = "Name không được để 
                                 @NotEmpty(message = "Email không được để trống")
                                 @Email
                                 String email,
-                                String phone) {
+                                String phone,
+                                String address) {
 }

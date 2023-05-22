@@ -17,7 +17,7 @@ public interface UserService {
     UserDTO updateUser(int id, UpdateUserRequest userRequest);
 
     boolean deleteUser(int id);
-    UserDTO updateUserPassWord(int id, UpdateUserPasswordRequest updateUserPasswordRequest);
-    FileResponse updateUserAvatar(int id, MultipartFile file);
+//    UserDTO updateUserPassWord(int id, UpdateUserPasswordRequest updateUserPasswordRequest);
+//    FileResponse updateUserAvatar(int id, MultipartFile file);
 
 }

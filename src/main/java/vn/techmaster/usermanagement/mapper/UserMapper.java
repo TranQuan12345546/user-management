@@ -8,10 +8,10 @@ public class UserMapper {
         return new UserDTO(
                 user.getId(),
                 user.getName(),
-                user.getEmail(),
-                user.getPhone(),
-                user.getAddress(),
-                user.getAvatar()
+                user.getEmail()
+//                user.getPhone(),
+//                user.getAddress(),
+//                user.getAvatar()
         );
     }
 }

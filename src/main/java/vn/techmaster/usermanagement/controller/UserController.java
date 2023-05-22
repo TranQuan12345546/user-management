@@ -1,6 +1,7 @@
 package vn.techmaster.usermanagement.controller;
 
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,14 +13,11 @@ import vn.techmaster.usermanagement.service.UserService;
 import java.util.List;
 
 @RestController
+@AllArgsConstructor
 @RequestMapping("/api/v1")
 public class UserController {
 
     private UserService userService;
-
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
 
     @GetMapping("/users")
     public ResponseEntity<?> getListUser() {
@@ -49,7 +47,6 @@ public class UserController {
         UserDTO result = userService.updateUser(id, req);
         return ResponseEntity.ok(result);
     }
-
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable int id) {
         userService.deleteUser(id);
